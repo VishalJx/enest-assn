@@ -8,6 +8,8 @@ const next = require('next');
 
 dotenv.config();
 
+connectDB();
+
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -15,15 +17,13 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
     const server = express();
-    
-    connectDB();
-    
+        
     server.use(cors());
     server.use(express.json());
     
     server.use('/api', courseRoutes);
     
-    server.all('*', (req, res) => {
+    server.get('*', (req, res) => {
         return handle(req, res);
     });
     
@@ -34,6 +34,5 @@ app.prepare().then(() => {
     });
     }).catch((error) => {
         console.error(error);
-        process.exit(1);
     }
 );
