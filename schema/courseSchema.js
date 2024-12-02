@@ -1,24 +1,32 @@
 const mongoose = require('mongoose');
 
-
 const courseSchema = new mongoose.Schema({
-    title:{
+    title: {
         type: String,
         required: true,
     },
-    content:{
+    content: {
         type: String,
         required: true,
     },
-    price:{
+    price: {
         type: Number,
         required: true,
     },
-    discount:{
+    discount: {
         type: Number,
         required: true,
     },
+    entranceExam: {
+        type: String,
+        enum: ['all', 'cftri', 'gate', 'cuet', 'ugc net', 'nin', 'icar', 'mba (gdpi)'],
+        default: 'all'
+    },
+    competitiveExam: {
+        type: String,
+        enum: ['all', 'jae-sfa', 'cgpdtm', 'cfso', 'fci'],
+        default: 'all'
+    }
 });
-
 
 module.exports = mongoose.model('course', courseSchema);

@@ -10,7 +10,7 @@ const Card = ({
     discount
 }) => {
   return (
-    <div className='border border-gray-300 rounded-3xl w-[16.5rem] h-[24.7rem] p-2 bg-white'>
+    <div className='border border-gray-300 rounded-3xl w-[16rem] h-[24.7rem] p-2 bg-white'>
         <div className=' border border-gray-200 rounded-2xl'>
             <Image
                 src="/assets/img1.jpeg"
@@ -26,7 +26,7 @@ const Card = ({
             <p className='font-medium h-[2rem]'>{content}</p>
             <p className='font-xs font-medium text-purple-700 mt-3'>Special Price</p>
             <span className='flex items-center gap-3 '>
-                <span className='font-semibold text-[1.1rem]'>{price}</span>
+                <span className='font-semibold text-[1.1rem]'>₹{price}</span>
                 <span className='text-xs text-green-500 mt-1 font-medium'>{discount} % off</span>
             </span>
             <p className='line-through text-gray-400 text-sm mt-2'> Rs. 3000</p>

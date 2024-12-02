@@ -8,9 +8,6 @@ Built as an assessment project.
 
 ## Features
 
-### 1. Course Browsing
-- Dynamic course listing with pagination
-- Grid view of course cards
 
 ### 1. Search Functionality
 - Real-time search input
@@ -18,13 +15,22 @@ Built as an assessment project.
 - Instant filtering of course results
 - Seamless integration with pagination
 
+### 2. Filter courses
+- Real-time filters
+- Courses can be filtered based on 2 separate categories
+
 ### 3. Pagination
 - Support for multiple pages of courses
 - Dynamic page number generation
 - Previous and Next navigation buttons
 - Active page highlighting
 
-### 4. Loading States
+### 4. Reponsive Design
+- Compatible with mobile/tablet/desktop view
+- Implemented hammenu for navbar
+- Single click filter in mobile/tablet view
+
+### 5. Shimmer for better UI
 - Shimmer loading effect for improved user experience
 - Graceful handling of data fetching
 
@@ -59,7 +65,6 @@ Built as an assessment project.
  
 
 ## Potential Improvements
-- Add advanced filtering options
 - Add course details modal
 - Create user authentication
 
