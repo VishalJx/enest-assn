@@ -48,7 +48,7 @@ export default function CourseListing() {
       });
 
       const response = await fetch(
-        `http://localhost:5000/api/courses?${queryParams}`,
+        `/api/courses?${queryParams}`,
         {
           method: 'GET',
           headers: {
